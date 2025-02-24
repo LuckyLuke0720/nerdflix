@@ -38,8 +38,8 @@ export default defineComponent({
     align-items: center;
     padding: 5px 10px;
     border-radius: 5px;
-    border-color: grey;
-    width: 250px;
+    border-color: white;
+    width: 300px;
 }
 
 .searchIcon{
@@ -52,6 +52,7 @@ input {
     background: transparent;
     padding-left: 5px;
     flex-grow: 1;
+    color: white;
 }
 
 input::placeholder {
