@@ -20,7 +20,7 @@ export default defineComponent({
         const searchTerm = ref('');
 
         const emitSearchTerm = () => {
-            emit('typing', searchTerm.value)//emit when text is being tyoed
+            emit('typing', searchTerm.value)//emit when text is being typed
         };
 
         return {
@@ -38,12 +38,12 @@ export default defineComponent({
     align-items: center;
     padding: 5px 10px;
     border-radius: 5px;
-    border-color: white;
+    border-color: grey;
     width: 300px;
 }
 
 .searchIcon{
-    color: grey;
+    color: white;
 }
 
 input {
