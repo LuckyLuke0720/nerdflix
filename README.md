@@ -24,7 +24,7 @@ After setting up and running the Vue project, you can switch between the "HomePa
 
 You can search movies based on the title, by typing in the searchbar. On hovering over the movie's poster, the ImDB rating is shown as an overlay. Because some of the poster URLs don't work, the feature only applies to movies that have the URLs active.
 
-The filters are present, but not functional. Without the challenges they would've worked, as I have implemented this exact feature in a different project of mine.
+The filters are present, but not functional. Without the challenges and the caused time issues, they would've worked, as I have implemented this exact feature in a different project of mine.
 
 The like system is not operational. It would be implemented by having a liked prop in each MovieCard that sets to true if the users presses the like button linked to each MovieCard. Based on this prop, it would've been possible to show a list of liked movies.
 
@@ -37,3 +37,6 @@ Open on the initialised port of localserver
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## P.S. note
+I apologise for parts with messy code or lack of sufficient comments. The rush limited my ability of also maintaining clean, consistent code. In an 'at-work' scenario, I would have taken time outside of schedule to maintain high standards ;). The scale of the project did not warrant on working on specific feature/ responsability branches
