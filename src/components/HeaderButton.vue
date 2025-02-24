@@ -1,5 +1,5 @@
 <template>
-    <button class="headerBtn">{{ label }}</button> 
+    <button class="headerBtn" :class="{ active: isSelected}">{{ label }}</button> 
 </template>
 
 <script>
@@ -10,23 +10,28 @@ export default defineComponent({
         label: {
             type: String,
             required: true
+        },
+        isSelected: {
+            type: Boolean,
+            default: false
         }
     }
 })
 </script>
 
 <style scoped>
-.headerBtn{
+.headerBtn {
     color: lightgray;
     background-color: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
     padding-bottom: 10px;
-    border-bottom-color: red;
-    border-width: 5px;
     margin-right: 30px;
     font-size: medium;
+    cursor: pointer;
+}
+
+.headerBtn.active {
+    border-bottom: 5px solid red;
 }
 
 </style>

@@ -1,9 +1,9 @@
 <template>
     <div class="header">
         <div class="buttonsSection">
-            <HeaderButton label="Home Page" />
-            <HeaderButton label="Movies" />
-            <HeaderButton label="Series" />
+            <HeaderButton label="Home Page" :isSelected="selectedSection === 'Home Page'" @click="selectSection('Home Page')" />
+            <HeaderButton label="Movies" :isSelected="selectedSection === 'Movies'" @click="selectSection('Movies')"/>
+            <HeaderButton label="Series" :isSelected="selectedSection === 'Series'" @click="selectSection('Series')"/>
         </div>
         <div class="title">
             <h1>NerdFlix</h1>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { BIconStarFill } from 'bootstrap-icons-vue'
 import HeaderButton from './HeaderButton.vue';
 
@@ -24,6 +24,17 @@ export default defineComponent({
     components: {
         HeaderButton,
         BIconStarFill
+    },
+    emits: ['sectionSelected'],
+    setup(_, { emit }) {
+        const selectedSection = ref('Home Page');
+
+        const selectSection = (section) => {
+            selectedSection.value = section;
+            emit('sectionSelected', section);
+        };
+
+        return { selectedSection, selectSection };
     }
 })
 </script>
