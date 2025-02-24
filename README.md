@@ -28,10 +28,12 @@ The filters are present, but not functional. Without the challenges they would'v
 
 The like system is not operational. It would be implemented by having a liked prop in each MovieCard that sets to true if the users presses the like button linked to each MovieCard. Based on this prop, it would've been possible to show a list of liked movies.
 
-### Compiles and hot-reloads for development
+### How to run
 ```
 npm run serve
 ```
+
+Open on the initialised port of localserver
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
